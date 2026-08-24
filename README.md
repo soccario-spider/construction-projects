@@ -57,6 +57,14 @@ This inventories your project files, classifies document types, and establishes 
 | `/code-researcher` | Research applicable building codes, standards, and jurisdiction requirements |
 | `/subcontract-writer` | Generate a scope-specific subcontract from your firm's template |
 
+## MCP Connector (Optional)
+
+This repo also ships an MCP server (`mcp_server/`) that exposes the shared
+PDF/vision tooling, findings graph, issue registry, and reference data as
+MCP tools — for MCP clients that want to call them directly instead of
+going through a skill. `./setup` installs it and Claude Code picks it up
+automatically via `.mcp.json`. See [mcp_server/README.md](mcp_server/README.md).
+
 ## AgentCM (Optional)
 
 If your project uses [AgentCM](https://github.com/dleerdefi/AgentCM), skills automatically read from pre-indexed structured data in the `.construction/` directory for faster results. Skills work without AgentCM using Claude's built-in vision and PDF tools.

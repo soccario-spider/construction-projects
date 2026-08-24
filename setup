@@ -97,6 +97,9 @@ fi
 
 echo "      Installing dependencies into venv..."
 "$VENV_PIP" install -r "$SCRIPT_DIR/requirements.txt" --quiet --upgrade
+if [ -f "$SCRIPT_DIR/mcp_server/requirements.txt" ]; then
+  "$VENV_PIP" install -r "$SCRIPT_DIR/mcp_server/requirements.txt" --quiet --upgrade
+fi
 echo "      Python venv ready at: $VENV_DIR"
 echo "      Python: $VENV_PYTHON"
 

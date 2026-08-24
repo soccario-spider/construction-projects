@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "construction-skills": {
+      "command": "bin/construction-python",
+      "args": ["mcp_server/server.py"]
+    }
+  }
+}
