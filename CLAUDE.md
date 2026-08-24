@@ -47,3 +47,8 @@ bin/dev-teardown    # Remove symlink
 ### Authoritative SOP
 - The comprehensive skill architecture SOP is at `docs/CM_SKILLS_SOP.md`
 - Covers: three-tier progressive disclosure, YAML front matter spec, 500-line limit, refactoring lifecycle, evals framework, skill categories (Builder, Extraction, Generation, Research)
+
+### MCP Connector
+- `mcp_server/` exposes the shared `scripts/` tooling and `reference/` data as MCP tools for non-skill MCP clients — see `mcp_server/README.md`
+- Registered project-wide via `.mcp.json`; new shared scripts should get a matching tool added there
+- Does not wrap per-skill scripts — those stay behind their skill's `SKILL.md` workflow
